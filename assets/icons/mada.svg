@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="madaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#004F9F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="45" fill="url(#madaGradient)" stroke="#003366" stroke-width="2"/>
+
+  <!-- Mada card concept -->
+  <g transform="translate(15, 25)">
+    <!-- Card background -->
+    <rect x="0" y="0" width="70" height="45" rx="8" fill="#FFFFFF" stroke="#003366" stroke-width="2"/>
+
+    <!-- Mada logo area -->
+    <rect x="5" y="5" width="25" height="15" rx="3" fill="#004F9F"/>
+    <text x="17" y="15" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#FFFFFF">مدى</text>
+
+    <!-- Card chip -->
+    <rect x="8" y="25" width="12" height="10" rx="2" fill="#FFD700" stroke="#CC9900" stroke-width="1"/>
+
+    <!-- Card number representation -->
+    <g transform="translate(25, 25)">
+      <rect x="0" y="0" width="8" height="3" rx="1" fill="#E0E0E0"/>
+      <rect x="12" y="0" width="8" height="3" rx="1" fill="#E0E0E0"/>
+      <rect x="24" y="0" width="8" height="3" rx="1" fill="#E0E0E0"/>
+      <rect x="36" y="0" width="8" height="3" rx="1" fill="#E0E0E0"/>
+    </g>
+
+    <!-- Cardholder name area -->
+    <rect x="8" y="35" width="30" height="2" rx="1" fill="#E0E0E0"/>
+    <rect x="8" y="38" width="20" height="2" rx="1" fill="#E0E0E0"/>
+
+    <!-- Payment network logo area -->
+    <circle cx="60" cy="35" r="8" fill="#FF0000" opacity="0.8"/>
+    <circle cx="55" cy="35" r="8" fill="#FFAA00" opacity="0.8"/>
+
+    <!-- Security features -->
+    <rect x="50" y="8" width="15" height="8" rx="2" fill="#C0C0C0" opacity="0.5"/>
+    <text x="57" y="14" font-family="Arial, sans-serif" font-size="6" text-anchor="middle" fill="#666">CVV</text>
+  </g>
+</svg>

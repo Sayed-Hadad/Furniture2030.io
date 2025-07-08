@@ -1,0 +1,39 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://mafrooshat2030.netlify.app/sitemap.xml
+
+# Allow all CSS and JS files
+Allow: /assets/
+
+# Allow all images
+Allow: /assets/images/
+
+# Disallow any temporary or admin files
+Disallow: /admin/
+Disallow: /.well-known/
+Disallow: /tmp/
+
+# Crawl delay for polite crawling
+Crawl-delay: 1
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block any unwanted bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
