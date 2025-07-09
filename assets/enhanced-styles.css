@@ -1907,4 +1907,38 @@ html, body {
   .slider-counter-new { top: 2px; font-size: 0.85rem; padding: 2px 8px; }
   .slider-dots-new { bottom: 2px; gap: 6px; }
 }
-/* === End Modern Responsive Slider === */
+
+/* Floating WhatsApp Icon */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 28px;
+    left: 28px;
+    z-index: 9999;
+    background: #25d366;
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    font-size: 2.1rem;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    text-decoration: none;
+}
+.floating-whatsapp:hover {
+    background: #128c7e;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+    transform: scale(1.08);
+}
+@media (max-width: 600px) {
+    .floating-whatsapp {
+        left: 16px;
+        bottom: 16px;
+        width: 46px;
+        height: 46px;
+        font-size: 1.5rem;
+    }
+}
+/* ...existing code... */
