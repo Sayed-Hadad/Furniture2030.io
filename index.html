@@ -6,13 +6,13 @@
     <title>مفروشات 2030 - أثاث فاخر وعصري</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="مفروشات 2030 - أفضل متجر أثاث فاخر في دومة الجندل. غرف نوم، صالونات، غرف طعام، مكاتب عصرية بأعلى جودة وأفضل الأسعار">
-    <meta name="keywords" content="أثاث فاخر، غرف نوم، صالونات، غرف طعام، مكاتب، دومة الجندل، السعودية، مفروشات">
+    <meta name="description" content="مفروشات 2030 - تشكيلة متكاملة من غرف النوم، غرف الملابس، والمجالس بتصاميم عصرية وكلاسيكية ووطنية. تفصيل حسب الطلب وستائر فخمة">
+    <meta name="keywords" content="غرف نوم، غرف ملابس، مجالس، ستائر، تصاميم عصرية، كلاسيكية، وطنية، تفصيل، دومة الجندل، مفروشات">
     <meta name="author" content="مفروشات 2030">
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="مفروشات 2030 - أثاث فاخر وعصري">
-    <meta property="og:description" content="أفضل متجر أثاث فاخر في دومة الجندل. غرف نوم، صالونات، غرف طعام، مكاتب عصرية">
+    <meta property="og:description" content="تشكيلة متكاملة من غرف النوم، غرف الملابس، والمجالس بتصاميم عصرية وكلاسيكية ووطنية. تفصيل حسب الطلب وستائر فخمة">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mafrooshat2030.netlify.app">
     <meta property="og:image" content="https://mafrooshat2030.netlify.app/assets/images/hero1.jpg">
@@ -29,1177 +29,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/rtl-arabic.css">
     <link rel="stylesheet" href="assets/main.css">
-
-    <!-- Mobile Responsive CSS -->
-    <style>
-        /* Modern UI Improvements */
-        :root {
-            --primary-gradient: linear-gradient(135deg, #c9a96e 0%, #b8956a 100%);
-            --secondary-gradient: linear-gradient(135deg, #f8f6f0 0%, #eae8e0 100%);
-            --shadow-light: 0 4px 20px rgba(201, 169, 110, 0.15);
-            --shadow-medium: 0 8px 30px rgba(201, 169, 110, 0.2);
-            --shadow-heavy: 0 15px 40px rgba(0, 0, 0, 0.1);
-            --border-radius: 20px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* Enhanced scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-gradient);
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(135deg, #b8956a 0%, #a68660 100%);
-        }
-
-        /* Enhanced Navigation */
-        .navbar {
-            backdrop-filter: blur(20px);
-            background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid rgba(201, 169, 110, 0.1);
-            transition: var(--transition);
-        }
-
-        .navbar:hover {
-            box-shadow: var(--shadow-light);
-        }
-
-        .nav-link {
-            position: relative;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .nav-link::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: var(--primary-gradient);
-            transition: var(--transition);
-            transform: translateX(-50%);
-        }
-
-        .nav-link:hover::before,
-        .nav-link.active::before {
-            width: 80%;
-        }
-
-        .nav-link:hover {
-            transform: translateY(-2px);
-            color: #c9a96e;
-        }
-
-        /* Enhanced Hero Section with Advanced Animations */
-        .hero {
-            position: relative;
-            overflow: hidden;
-            min-height: 100vh;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg,
-                rgba(201, 169, 110, 0.1) 0%,
-                rgba(0, 0, 0, 0.3) 50%,
-                rgba(201, 169, 110, 0.1) 100%);
-            z-index: 1;
-            animation: overlayPulse 8s ease-in-out infinite;
-        }
-
-        .hero-slider {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transform: translateX(100%) scale(0.95);
-            transition: all 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        .slide.active {
-            opacity: 1;
-            transform: translateX(0) scale(1);
-            z-index: 1;
-        }
-
-        .slide.prev {
-            transform: translateX(-100%) scale(0.95);
-            opacity: 0;
-            z-index: 0;
-        }
-
-        .slide.next {
-            transform: translateX(100%) scale(0.95);
-            opacity: 0;
-            z-index: 0;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-            object-position: center;
-            transform: scale(1.15) rotate(1deg);
-            transition: all 15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            filter: brightness(0.75) contrast(1.15) saturate(1.1);
-        }
-
-        .slide.active img {
-            transform: scale(1) rotate(0deg);
-            filter: brightness(0.8) contrast(1.1) saturate(1.05);
-        }
-
-        /* Enhanced Slide Content with Advanced Animations */
-        .slide-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-            text-align: center;
-            backdrop-filter: blur(20px);
-            background: linear-gradient(135deg,
-                rgba(0, 0, 0, 0.8) 0%,
-                rgba(0, 0, 0, 0.6) 50%,
-                rgba(0, 0, 0, 0.8) 100%);
-            border-radius: var(--border-radius);
-            padding: 3rem 2.5rem;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-            max-width: 700px;
-            width: 90%;
-            opacity: 0;
-            transform: translate(-50%, -50%) translateY(50px) scale(0.9);
-            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-
-        .slide.active .slide-content {
-            opacity: 1;
-            transform: translate(-50%, -50%) translateY(0) scale(1);
-            transition-delay: 0.5s;
-            animation: contentFloating 6s ease-in-out infinite;
-        }
-
-        .slide-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg,
-                rgba(201, 169, 110, 0.3) 0%,
-                rgba(184, 149, 106, 0.2) 100%);
-            border-radius: var(--border-radius);
-            z-index: -1;
-            opacity: 0;
-            animation: gradientPulse 3s ease-in-out infinite;
-        }
-
-        .slide-content h1 {
-            color: white;
-            text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            font-size: 3rem;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: none;
-        }
-
-        .slide.active .slide-content h1 {
-            animation: slideInFromTop 1s ease-out 0.8s forwards;
-        }
-
-        .slide-content p {
-            color: rgba(255, 255, 255, 0.95);
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
-            font-size: 1.3rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: none;
-        }
-
-        .slide.active .slide-content p {
-            animation: slideInFromBottom 1s ease-out 1s forwards;
-        }
-
-        .cta-btn {
-            background: var(--primary-gradient);
-            border: none;
-            padding: 1.2rem 2.5rem;
-            border-radius: 50px;
-            color: white;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(201, 169, 110, 0.4);
-            font-size: 1.1rem;
-            opacity: 0;
-            transform: translateY(30px) scale(0.9);
-        }
-
-        .slide.active .cta-btn {
-            animation: buttonAppear 1s ease-out 1.2s forwards;
-        }
-
-        .cta-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: all 0.6s ease;
-        }
-
-        .cta-btn:hover::before {
-            left: 100%;
-        }
-
-        .cta-btn::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.4s ease;
-        }
-
-        .cta-btn:hover::after {
-            width: 300px;
-            height: 300px;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 40px rgba(201, 169, 110, 0.6);
-        }
-
-        /* Enhanced Slider Dots with Advanced Animations */
-        .slider-dots {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 15px;
-            z-index: 3;
-            backdrop-filter: blur(10px);
-            background: rgba(0, 0, 0, 0.3);
-            padding: 15px 25px;
-            border-radius: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .dot {
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.4);
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .dot::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.3s ease;
-        }
-
-        .dot:hover::after {
-            width: 200%;
-            height: 200%;
-        }
-
-        .dot.active::before,
-        .dot:hover::before {
-            width: 100%;
-            height: 100%;
-        }
-
-        .dot.active,
-        .dot:hover {
-            background: rgba(255, 255, 255, 0.8);
-            transform: scale(1.3);
-            box-shadow: 0 4px 15px rgba(201, 169, 110, 0.5);
-        }
-
-        .dot.active {
-            background: var(--primary-gradient);
-            box-shadow: 0 6px 20px rgba(201, 169, 110, 0.7);
-        }
-
-        /* Progress Bar for Auto-slide */
-        .slide-progress {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 4px;
-            background: var(--primary-gradient);
-            width: 0;
-            z-index: 4;
-            animation: progressBar 5s linear infinite;
-            border-radius: 0 2px 2px 0;
-            box-shadow: 0 0 10px rgba(201, 169, 110, 0.5);
-        }
-
-        .slide-progress::after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: 0;
-            right: 0;
-            bottom: -2px;
-            background: linear-gradient(90deg,
-                rgba(201, 169, 110, 0.3) 0%,
-                rgba(201, 169, 110, 0.8) 50%,
-                rgba(201, 169, 110, 0.3) 100%);
-            border-radius: 0 4px 4px 0;
-            animation: progressGlow 2s ease-in-out infinite;
-        }
-
-        @keyframes progressBar {
-            0% {
-                width: 0;
-                opacity: 0.8;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                width: 100%;
-                opacity: 0.8;
-            }
-        }
-
-        @keyframes progressGlow {
-            0%, 100% {
-                opacity: 0.3;
-                transform: scaleY(1);
-            }
-            50% {
-                opacity: 0.8;
-                transform: scaleY(1.2);
-            }
-        }
-
-        /* Enhanced overlay animation */
-        @keyframes overlayPulse {
-            0%, 100% {
-                opacity: 0.8;
-            }
-            50% {
-                opacity: 1;
-            }
-        }
-
-        /* Parallax Effect for Images */
-        @keyframes imageParallax {
-            0% {
-                transform: scale(1.15) rotate(1deg) translateY(0);
-            }
-            50% {
-                transform: scale(1.05) rotate(0.5deg) translateY(-10px);
-            }
-            100% {
-                transform: scale(1) rotate(0deg) translateY(0);
-            }
-        }
-
-        /* Content Floating Animation */
-        @keyframes contentFloating {
-            0%, 100% {
-                transform: translate(-50%, -50%) translateY(0) scale(1);
-            }
-            25% {
-                transform: translate(-50%, -50%) translateY(-5px) scale(1.01);
-            }
-            50% {
-                transform: translate(-50%, -50%) translateY(0) scale(1);
-            }
-            75% {
-                transform: translate(-50%, -50%) translateY(5px) scale(0.99);
-            }
-        }
-
-        /* Enhanced About Section */
-        .about {
-            background: var(--secondary-gradient);
-            position: relative;
-        }
-
-        .about::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(201, 169, 110, 0.05) 100%);
-        }
-
-        /* About Section Image Optimization */
-        .about-image img {
-            width: 100% !important;
-            height: auto !important;
-            min-height: 300px !important;
-            max-height: 500px !important;
-            object-fit: contain !important;
-            border-radius: var(--border-radius) !important;
-            box-shadow: var(--shadow-heavy) !important;
-            display: block !important;
-            margin: 0 auto !important;
-            transition: var(--transition) !important;
-        }
-
-        .about-image img:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Ensure about image container is properly sized */
-        .about-image {
-            flex: 1 !important;
-            width: 100% !important;
-            max-width: 600px !important;
-        }
-
-        .about-content {
-            display: flex !important;
-            align-items: center !important;
-            gap: 50px !important;
-            flex-wrap: wrap !important;
-        }
-
-        .about-text {
-            flex: 1 !important;
-            min-width: 300px !important;
-        }
-
-        .about-text h2 {
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            position: relative;
-        }
-
-        .feature {
-            background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
-            transition: var(--transition);
-            border: 1px solid rgba(201, 169, 110, 0.1);
-        }
-
-        .feature:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-medium);
-            border-color: rgba(201, 169, 110, 0.3);
-        }
-
-        .feature i {
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Enhanced Categories */
-        .categories {
-            background: linear-gradient(135deg, #f8f6f0 0%, white 100%);
-        }
-
-        .category-card {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            transition: var(--transition);
-            position: relative;
-            box-shadow: var(--shadow-light);
-        }
-
-        .category-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--primary-gradient);
-            opacity: 0;
-            transition: var(--transition);
-            z-index: 1;
-        }
-
-        .category-card:hover::before {
-            opacity: 0.1;
-        }
-
-        .category-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            box-shadow: var(--shadow-heavy);
-        }
-
-        .category-overlay {
-            position: relative;
-            z-index: 2;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 70%);
-            backdrop-filter: blur(5px);
-        }
-
-        .category-btn {
-            background: var(--primary-gradient);
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
-            color: white;
-            font-weight: 600;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .category-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            transition: var(--transition);
-            transform: translate(-50%, -50%);
-        }
-
-        .category-btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .category-btn:hover {
-            transform: scale(1.05);
-            box-shadow: var(--shadow-light);
-        }
-
-        /* Enhanced Payment Methods */
-        .payment-methods {
-            background: white;
-            position: relative;
-        }
-
-        .payment-item {
-            background: var(--secondary-gradient);
-            border-radius: 15px;
-            padding: 1.5rem;
-            transition: var(--transition);
-            border: 1px solid rgba(201, 169, 110, 0.1);
-            text-align: center;
-        }
-
-        .payment-item:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: var(--shadow-medium);
-            border-color: rgba(201, 169, 110, 0.3);
-        }
-
-        .payment-item img {
-            transition: var(--transition);
-            filter: grayscale(0.3);
-        }
-
-        .payment-item:hover img {
-            filter: grayscale(0);
-            transform: scale(1.1);
-        }
-
-        /* Enhanced Contact Section */
-        .contact {
-            background: var(--secondary-gradient);
-        }
-
-        .contact-item {
-            background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
-            transition: var(--transition);
-            border: 1px solid rgba(201, 169, 110, 0.1);
-            margin-bottom: 1rem;
-        }
-
-        .contact-item:hover {
-            transform: translateX(10px);
-            box-shadow: var(--shadow-light);
-            border-color: rgba(201, 169, 110, 0.3);
-        }
-
-        .contact-item i {
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .contact-map iframe {
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-medium);
-        }
-
-        /* Enhanced Footer */
-        .footer {
-            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
-            position: relative;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: var(--primary-gradient);
-        }
-
-        /* Enhanced Logo and Icons Responsiveness */
-        .logo {
-            max-width: 100%;
-            height: auto;
-            max-height: 50px;
-        }
-
-        .footer-logo {
-            max-width: 150px;
-            height: auto;
-        }
-
-        /* Social Icons Responsive */
-        .social-links a {
-            width: 45px;
-            height: 45px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .social-links i {
-            font-size: 18px;
-        }
-
-        /* Contact Icons */
-        .contact-item i {
-            font-size: 20px;
-            margin-left: 10px;
-            flex-shrink: 0;
-        }
-
-        /* Feature Icons */
-        .feature i {
-            font-size: 24px;
-            margin-left: 10px;
-        }
-
-        /* Enhanced Animations */
-        @keyframes slideInFromTop {
-            0% {
-                opacity: 0;
-                transform: translateY(-80px) scale(0.8);
-                filter: blur(10px);
-            }
-            60% {
-                opacity: 0.8;
-                transform: translateY(10px) scale(1.05);
-                filter: blur(2px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-                filter: blur(0);
-            }
-        }
-
-        @keyframes slideInFromBottom {
-            0% {
-                opacity: 0;
-                transform: translateY(80px) scale(0.8);
-                filter: blur(10px);
-            }
-            60% {
-                opacity: 0.8;
-                transform: translateY(-10px) scale(1.05);
-                filter: blur(2px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-                filter: blur(0);
-            }
-        }
-
-        @keyframes buttonAppear {
-            0% {
-                opacity: 0;
-                transform: translateY(50px) scale(0.5) rotateX(45deg);
-                filter: blur(10px);
-            }
-            70% {
-                opacity: 0.9;
-                transform: translateY(-5px) scale(1.1) rotateX(-5deg);
-                filter: blur(1px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0) scale(1) rotateX(0deg);
-                filter: blur(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Section reveal animation */
-        .section-title {
-            opacity: 0;
-            animation: fadeInUp 1s ease-out forwards;
-        }
-
-        /* Enhanced section titles */
-        .section-title {
-            position: relative;
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            background: var(--primary-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: var(--primary-gradient);
-            border-radius: 2px;
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
-            /* تكبير السلايدر للموبايل */
-            .hero {
-                min-height: 75vh;
-            }
-            .hero-slider {
-                height: 75vh;
-            }
-            .slide,
-            .slide img {
-                height: 75vh !important;
-                min-height: 260px !important;
-                max-height: 90vh !important;
-            }
-            .slide img {
-                transform: scale(1.01) !important;
-                transition: none !important;
-                filter: brightness(0.85) contrast(1.05) saturate(1.02) !important;
-                animation: none !important;
-            }
-            .slide.active img {
-                transform: scale(1) !important;
-                filter: brightness(0.9) contrast(1.05) saturate(1.02) !important;
-                animation: none !important;
-            }
-            .slide-content {
-                padding: 1.5rem 0.7rem !important;
-                max-width: 98vw !important;
-                font-size: 1.05rem !important;
-            }
-            .slide-content h1 {
-                font-size: 1.5rem !important;
-                margin-bottom: 0.7rem !important;
-            }
-            .slide-content p {
-                font-size: 1rem !important;
-                margin-bottom: 0.9rem !important;
-            }
-            .cta-btn {
-                padding: 0.7rem 1.3rem !important;
-                font-size: 1rem !important;
-                min-width: 140px;
-            }
-            /* تعطيل الانيميشن الثقيلة */
-            .slide-content,
-            .slide-content h1,
-            .slide-content p,
-            .slide.active .slide-content,
-            .slide.active .slide-content h1,
-            .slide.active .slide-content p {
-                animation: none !important;
-                filter: none !important;
-                opacity: 1 !important;
-                transform: none !important;
-            }
-            /* تعطيل Ken Burns على الصور */
-            .slide:nth-child(1).active img,
-            .slide:nth-child(2).active img,
-            .slide:nth-child(3).active img {
-                animation: none !important;
-            }
-            /* تصغير النقاط */
-            .slider-dots {
-                padding: 10px 14px !important;
-                gap: 10px !important;
-                bottom: 18px !important;
-            }
-            .dot {
-                width: 12px !important;
-                height: 12px !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero, .hero-slider, .slide, .slide img {
-                height: 60vh !important;
-                min-height: 180px !important;
-                max-height: 80vh !important;
-            }
-            .slide-content {
-                padding: 1rem 0.3rem !important;
-                font-size: 0.95rem !important;
-            }
-            .slide-content h1 {
-                font-size: 1.2rem !important;
-            }
-            .cta-btn {
-                padding: 0.6rem 1rem !important;
-                font-size: 0.9rem !important;
-            }
-        }
-
-        /* Tablet landscape optimization - Enhanced Images */
-        @media (min-width: 769px) and (max-width: 1199px) {
-            .hero {
-                min-height: 70vh;
-            }
-
-            .slide img {
-                width: 100%;
-                height: 70vh;
-                object-fit: cover;
-                object-position: center;
-            }
-
-            .about-image img {
-                min-height: 350px !important;
-                max-height: 450px !important;
-                object-fit: cover !important;
-            }
-
-            .category-card {
-                height: 320px;
-            }
-
-            .category-card img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-            }
-        }
-
-        /* Large screens optimization - Enhanced Images */
-        @media (min-width: 1200px) {
-            .hero {
-                min-height: 80vh;
-            }
-
-            .slide img {
-                width: 100%;
-                height: 80vh;
-                object-fit: cover;
-                object-position: center;
-            }
-
-            .about-image img {
-                min-height: 400px !important;
-                max-height: 600px !important;
-                object-fit: cover !important;
-            }
-
-            .about-content {
-                gap: 60px !important;
-            }
-
-            .category-card {
-                height: 350px;
-            }
-
-            .category-card img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-            }
-        }
-
-        /* Tablet portrait optimization - Enhanced Images */
-        @media (min-width: 481px) and (max-width: 768px) {
-            .hero {
-                min-height: 65vh;
-            }
-
-            .slide img {
-                width: 100%;
-                height: 65vh;
-                object-fit: cover;
-                object-position: center;
-            }
-
-            .about-image img {
-                width: 100% !important;
-                height: auto !important;
-                min-height: 250px !important;
-                max-height: 350px !important;
-                object-fit: cover !important;
-                border-radius: 12px !important;
-            }
-
-            .category-card {
-                height: 280px;
-            }
-
-            .category-card img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-            }
-
-            .payment-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 1rem;
-            }
-
-            .payment-item img {
-                height: 35px;
-                width: auto;
-                max-width: 100%;
-            }
-        }
-
-        /* Ken Burns Effect for Slide Images */
-        @keyframes kenBurns1 {
-            0% {
-                transform: scale(1.1) translateX(0) translateY(0) rotate(0.5deg);
-                filter: brightness(0.7) saturate(1.2);
-            }
-            33% {
-                transform: scale(1.05) translateX(-20px) translateY(-10px) rotate(0deg);
-                filter: brightness(0.75) saturate(1.1);
-            }
-            66% {
-                transform: scale(1.08) translateX(10px) translateY(15px) rotate(-0.3deg);
-                filter: brightness(0.8) saturate(1.05);
-            }
-            100% {
-                transform: scale(1) translateX(0) translateY(0) rotate(0deg);
-                filter: brightness(0.8) saturate(1);
-            }
-        }
-
-        @keyframes kenBurns2 {
-            0% {
-                transform: scale(1.15) translateX(-10px) translateY(10px) rotate(-0.5deg);
-                filter: brightness(0.7) saturate(1.2);
-            }
-            50% {
-                transform: scale(1.05) translateX(20px) translateY(-15px) rotate(0.2deg);
-                filter: brightness(0.78) saturate(1.1);
-            }
-            100% {
-                transform: scale(1) translateX(0) translateY(0) rotate(0deg);
-                filter: brightness(0.8) saturate(1);
-            }
-        }
-
-        @keyframes kenBurns3 {
-            0% {
-                transform: scale(1.12) translateX(15px) translateY(-5px) rotate(0.3deg);
-                filter: brightness(0.7) saturate(1.2);
-            }
-            40% {
-                transform: scale(1.08) translateX(-10px) translateY(20px) rotate(-0.2deg);
-                filter: brightness(0.76) saturate(1.15);
-            }
-            100% {
-                transform: scale(1) translateX(0) translateY(0) rotate(0deg);
-                filter: brightness(0.8) saturate(1);
-            }
-        }
-
-        /* Apply different Ken Burns effects to different slides */
-        .slide:nth-child(1).active img {
-            animation: kenBurns1 15s ease-in-out infinite;
-        }
-
-        .slide:nth-child(2).active img {
-            animation: kenBurns2 18s ease-in-out infinite;
-        }
-
-        .slide:nth-child(3).active img {
-            animation: kenBurns3 20s ease-in-out infinite;
-        }
-
-        /* Enhanced Image Responsiveness */
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Sticky Social Media Bar */
-        #sticky-social { display: none !important; }
-    </style>
-
-    <!-- واتساب عائم -->
-    <style>
-        .floating-whatsapp {
-            position: fixed;
-            bottom: 28px;
-            left: 28px;
-            z-index: 9999;
-            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
-            color: #fff;
-            width: 62px;
-            height: 62px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 32px 0 rgba(37,211,102,0.25), 0 0 0 0 rgba(37,211,102,0.25);
-            transition: box-shadow 0.3s, transform 0.3s;
-            font-size: 2.3rem;
-            cursor: pointer;
-            animation: floatWhatsapp 2.5s infinite ease-in-out, whatsappPulse 1.8s infinite cubic-bezier(.66,0,0,1);
-            overflow: visible;
-        }
-        .floating-whatsapp::before {
-            content: '';
-            position: absolute;
-            width: 90px;
-            height: 90px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            background: radial-gradient(rgba(37,211,102,0.18) 0%, rgba(37,211,102,0.08) 60%, transparent 100%);
-            z-index: -1;
-            pointer-events: none;
-            animation: whatsappGlow 2.2s infinite cubic-bezier(.66,0,0,1);
-        }
-        .floating-whatsapp i {
-            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18));
-            text-shadow: 0 1px 8px #128c7e44;
-        }
-        .floating-whatsapp:hover {
-            box-shadow: 0 16px 48px 0 rgba(37,211,102,0.35), 0 0 0 12px rgba(37,211,102,0.10);
-            transform: scale(1.12) translateY(-6px) rotate(-6deg);
-            background: linear-gradient(135deg, #25d366 10%, #43e97b 90%);
-        }
-        .floating-whatsapp:active {
-            transform: scale(0.97);
-        }
-        @keyframes floatWhatsapp {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-        @keyframes whatsappPulse {
-            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.18); }
-            70% { box-shadow: 0 0 0 18px rgba(37,211,102,0.08); }
-            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.18); }
-        }
-        @keyframes whatsappGlow {
-            0% { opacity: 0.7; }
-            50% { opacity: 1; }
-            100% { opacity: 0.7; }
-        }
-        @media (max-width: 600px) {
-            .floating-whatsapp {
-                left: 10px;
-                bottom: 10px;
-                width: 46px;
-                height: 46px;
-                font-size: 1.4rem;
-            }
-            .floating-whatsapp::before {
-                width: 65px;
-                height: 65px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/enhanced-styles.css">
 
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -1212,7 +42,7 @@
         "name": "مفروشات 2030",
         "description": "متجر أثاث فاخر وعصري في الرياض",
         "url": "https://mafrooshat2030.netlify.app",
-        "telephone": "+966-12-73174215",
+        "telephone": "+966 53 540 6799",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "طريق الملك فهد، الفيصلية",
@@ -1232,7 +62,7 @@
 </head>
 <body>
     <!-- واتساب عائم -->
-    <a href="https://wa.me/966567123456" class="floating-whatsapp" target="_blank" title="تواصل عبر الواتساب">
+    <a href="https://wa.me/966535406799" class="floating-whatsapp" target="_blank" title="تواصل عبر الواتساب">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -1278,8 +108,8 @@
             <div class="slide">
                 <img src="assets/images/hero2.jpg" alt="مجالس عصرية" loading="lazy">
                 <div class="slide-content">
-                    <h1>صالونات عصرية</h1>
-                    <p>صالونات بتصاميم حديثة وجودة عالية</p>
+                    <h1>مجالس عصرية وكلاسيكية</h1>
+                    <p>مجالس بتشطيبات متنوعة وجودة ممتازة</p>
                     <a href="#categories" class="cta-btn">تسوق الآن</a>
                 </div>
             </div>
@@ -1291,12 +121,46 @@
                     <a href="#categories" class="cta-btn">تسوق الآن</a>
                 </div>
             </div>
+            <div class="slide">
+                <img src="assets/images/curtains.jpg" alt="ستائر فخمة" loading="lazy">
+                <div class="slide-content">
+                    <h1>ستائر فخمة وأنيقة</h1>
+                    <p>ستائر تضيف لمسة من الأناقة لأي مساحة</p>
+                    <a href="#categories" class="cta-btn">تسوق الآن</a>
+                </div>
+            </div>        </div>
+
+        <!-- Slider Counter -->
+        <div class="slider-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">4</span>
         </div>
+
+        <!-- Slider Navigation Arrows -->
+        <button class="slider-arrow slider-arrow-prev" onclick="prevSlide()">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="slider-arrow slider-arrow-next" onclick="nextSlide()">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <!-- Slider Dots -->
         <div class="slider-dots">
-            <span class="dot active" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot active" onclick="currentSlide(1)">
+                <div class="dot-progress"></div>
+            </span>
+            <span class="dot" onclick="currentSlide(2)">
+                <div class="dot-progress"></div>
+            </span>
+            <span class="dot" onclick="currentSlide(3)">
+                <div class="dot-progress"></div>
+            </span>
+            <span class="dot" onclick="currentSlide(4)">
+                <div class="dot-progress"></div>
+            </span>
         </div>
+
+        <!-- Progress Bar -->
+        <div class="slide-progress"></div>
     </section>
 
     <!-- About Section -->
@@ -1305,29 +169,69 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>من نحن</h2>
-                    <p>مفروشات 2030 هي وجهتك الأولى للأثاث الفاخر والعصري في المملكة العربية السعودية. نحن نقدم مجموعة واسعة من الأثاث عالي الجودة الذي يجمع بين الأناقة والراحة والمتانة.</p>
+                    <p>في مفروشات 2030، نحرص على تقديم تشكيلة متكاملة من غرف النوم، غرف الملابس، والمجالس بتصاميم عصرية، كلاسيكية، ووطنية، سواء جاهزة أو تفصيل حسب الطلب أو مع إمكانية التعديل وفق رغبة العميل.</p>
                     <p>مع سنوات من الخبرة في عالم الأثاث، نحن ملتزمون بتقديم أفضل المنتجات وأعلى مستويات الخدمة لعملائنا الكرام.</p>
                     <div class="about-features">
                         <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>جودة عالية مضمونة</span>
+                            <i class="fas fa-bed"></i>
+                            <span>غرف نوم بأنواع متعددة تناسب جميع الأذواق</span>
                         </div>
                         <div class="feature">
-                            <i class="fas fa-truck"></i>
-                            <span>توصيل مجاني داخل الرياض</span>
+                            <i class="fas fa-tshirt"></i>
+                            <span>غرف ملابس مصممة حسب الطلب باحترافية عالية</span>
                         </div>
                         <div class="feature">
-                            <i class="fas fa-tools"></i>
-                            <span>خدمة تركيب مجانية</span>
+                            <i class="fas fa-couch"></i>
+                            <span>مجالس وكنب بتشطيبات متنوعة وجودة ممتازة</span>
                         </div>
                         <div class="feature">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>ضمان شامل</span>
+                            <i class="fas fa-window-maximize"></i>
+                            <span>ستائر فخمة تضيف لمسة من الأناقة لأي مساحة</span>
                         </div>
                     </div>
+
+                    <!-- Statistics and Achievements -->
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">عميل راضي</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">سنوات خبرة</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">مشروع منجز</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">ضمان الجودة</div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="about-cta">
+                        <h3>اكتشف تشكيلتنا المتنوعة</h3>
+                        <p>من التصاميم العصرية إلى الكلاسيكية والوطنية، نوفر لك أفضل الخيارات</p>
+                        <div class="cta-buttons">
+                            <a href="#categories" class="cta-btn primary">تصفح منتجاتنا</a>
+                            <a href="#contact" class="cta-btn secondary">اطلب استشارة</a>
+                        </div>
+                    </div>
+
+
                 </div>
                 <div class="about-image">
-                    <img src="assets/images/showroom.jpg" alt="معرض مفروشات 2030" loading="lazy">
+                    <div class="image-container">
+                        <img src="assets/images/showroom.jpg" alt="معرض مفروشات 2030 - غرف نوم وملابس ومجالس فاخرة" loading="lazy">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>معرضنا</h3>
+                                <p>تشكيلة متنوعة من الأثاث الفاخر</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1347,10 +251,10 @@
                     </div>
                 </div>
                 <div class="category-card" data-category="living">
-                    <img src="assets/images/living-room.jpg" alt="صالونات" loading="lazy">
+                    <img src="assets/images/living-room.jpg" alt="مجالس" loading="lazy">
                     <div class="category-overlay">
-                        <h3>صالونات</h3>
-                        <p>صالونات عصرية وأنيقة</p>
+                        <h3>مجالس</h3>
+                        <p>مجالس بتشطيبات متنوعة وجودة ممتازة</p>
                         <a href="#contact" class="category-btn">استفسار</a>
                     </div>
                 </div>
@@ -1362,11 +266,19 @@
                         <a href="#contact" class="category-btn">استفسار</a>
                     </div>
                 </div>
-                <div class="category-card" data-category="office">
-                    <img src="assets/images/office.jpg" alt="مكاتب" loading="lazy">
+                <div class="category-card" data-category="wardrobe">
+                    <img src="assets/images/wardrobe.jpg" alt="غرف ملابس" loading="lazy">
                     <div class="category-overlay">
-                        <h3>مكاتب</h3>
-                        <p>أثاث مكتبي عملي وأنيق</p>
+                        <h3>غرف ملابس</h3>
+                        <p>تصميم حسب الطلب وباحترافية عالية</p>
+                        <a href="#contact" class="category-btn">استفسار</a>
+                    </div>
+                </div>
+                <div class="category-card" data-category="curtains">
+                    <img src="assets/images/curtains2.jpg" alt="ستائر فخمة" loading="lazy">
+                    <div class="category-overlay">
+                        <h3>ستائر فخمة</h3>
+                        <p>ستائر تضيف لمسة من الأناقة</p>
                         <a href="#contact" class="category-btn">استفسار</a>
                     </div>
                 </div>
@@ -1419,17 +331,17 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>الهاتف</h4>
-                            <p dir="ltr">+966-12-73174215</p>
+                            <p dir="ltr">+966 53 540 6799</p>
                         </div>
                     </div>
                     <div class="contact-item whatsapp-contact">
                         <i class="fab fa-whatsapp"></i>
                         <div>
                             <h4>واتساب</h4>
-                            <a href="https://wa.me/966567123456" target="_blank" class="whatsapp-btn">
+                            <a href="https://wa.me/966535406799" target="_blank" class="whatsapp-btn">
                                 <i class="fab fa-whatsapp"></i>
                                 <span>تواصل عبر الواتساب</span>
-                                <span class="phone-number" dir="ltr">+966567123456</span>
+                                <span class="phone-number" dir="ltr">+966 53 540 6799</span>
                             </a>
                         </div>
                     </div>
@@ -1445,7 +357,7 @@
                 <div class="contact-social-links" style="margin-top: 2rem; text-align: center;">
                     <h4 style="margin-bottom: 1rem; color: #b8956a;">تابعنا على الشبكات الاجتماعية</h4>
                     <div class="social-links" style="justify-content: center; gap: 10px;">
-                        <a href="https://wa.me/966567123456" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/966535406799" target="_blank" title="واتساب"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://www.facebook.com/profile.php?id=61578065040062" target="_blank" title="فيسبوك"><i class="fab fa-facebook"></i></a>
                         <a href="https://www.instagram.com/mfrwshat2030" target="_blank" title="انستجرام"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.tiktok.com/@mfrwshat2030" target="_blank" title="تيك توك"><i class="fab fa-tiktok"></i></a>
@@ -1461,7 +373,7 @@
             <div class="contact-social">
                 <h4 style="margin-top:2rem; margin-bottom:1rem; text-align:center;">تابعنا على الشبكات الاجتماعية</h4>
                 <div class="social-links" style="justify-content:center; gap:18px;">
-                    <a href="https://wa.me/966567123456" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/966535406799" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=61578065040062" target="_blank"><i class="fab fa-facebook"></i></a>
                     <a href="https://www.instagram.com/mfrwshat2030" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.tiktok.com/@mfrwshat2030" target="_blank"><i class="fab fa-tiktok"></i></a>
@@ -1492,8 +404,8 @@
                 <div class="footer-section">
                     <h4>معلومات التواصل</h4>
                     <ul>
-                        <li><i class="fas fa-phone"></i> <span dir="ltr">+966-12-73174215</span></li>
-                        <li><i class="fab fa-whatsapp"></i> <span dir="ltr">+966567123456</span></li>
+                        <li><i class="fas fa-phone"></i> <span dir="ltr">+966 53 540 6799</span></li>
+                        <li><i class="fab fa-whatsapp"></i> <span dir="ltr">+966 53 540 6799</span></li>
                         <li><i class="fas fa-map-marker-alt"></i> دومة الجندل، السعودية</li>
                         <li><i class="fas fa-clock"></i> السبت - الخميس: 10:00 ص - 10:00 م</li>
                     </ul>
@@ -1529,16 +441,46 @@
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
         const totalSlides = slides.length;
+        const currentSlideCounter = document.getElementById('current-slide');
+        const totalSlidesCounter = document.getElementById('total-slides');
+
+        // Update counter display
+        function updateCounter() {
+            if (currentSlideCounter) {
+                currentSlideCounter.textContent = currentSlideIndex + 1;
+            }
+            if (totalSlidesCounter) {
+                totalSlidesCounter.textContent = totalSlides;
+            }
+        }
 
         // Function to show specific slide
         function showSlide(index) {
-            // Hide all slides
+            // Hide all slides and remove progress from dots
             slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+                const progress = dot.querySelector('.dot-progress');
+                if (progress) {
+                    progress.style.animation = 'none';
+                }
+            });
 
             // Show current slide
             slides[index].classList.add('active');
             dots[index].classList.add('active');
+
+            // Start progress animation for active dot
+            const activeProgress = dots[index].querySelector('.dot-progress');
+            if (activeProgress) {
+                // Force reflow to restart animation
+                activeProgress.style.animation = 'none';
+                activeProgress.offsetHeight; // Trigger reflow
+                activeProgress.style.animation = 'fillProgress 5s linear infinite';
+            }
+
+            // Update counter
+            updateCounter();
         }
 
         // Function to go to next slide
@@ -1562,6 +504,9 @@
             autoSlideInterval = setInterval(nextSlide, 5000);
         }
 
+        // Initialize counter
+        updateCounter();
+
         // Auto-slide every 5 seconds
         let autoSlideInterval = setInterval(nextSlide, 5000);
 
@@ -1570,10 +515,24 @@
         if (heroSection) {
             heroSection.addEventListener('mouseenter', () => {
                 clearInterval(autoSlideInterval);
+                // Pause progress animations
+                dots.forEach(dot => {
+                    const progress = dot.querySelector('.dot-progress');
+                    if (progress) {
+                        progress.style.animationPlayState = 'paused';
+                    }
+                });
             });
 
             heroSection.addEventListener('mouseleave', () => {
                 autoSlideInterval = setInterval(nextSlide, 5000);
+                // Resume progress animations
+                dots.forEach(dot => {
+                    const progress = dot.querySelector('.dot-progress');
+                    if (progress) {
+                        progress.style.animationPlayState = 'running';
+                    }
+                });
             });
         }
 
@@ -1599,11 +558,14 @@
             if (Math.abs(diff) > swipeThreshold) {
                 if (diff > 0) {
                     // Swipe left - next slide
-                    changeSlide(1);
+                    nextSlide();
                 } else {
                     // Swipe right - previous slide
-                    changeSlide(-1);
+                    prevSlide();
                 }
+                // Reset auto-slide timer
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(nextSlide, 5000);
             }
         }
 
@@ -1683,38 +645,108 @@
                 img.addEventListener('load', function() {
                     this.style.opacity = '1';
                     this.style.transform = 'scale(1)';
+                    this.classList.add('loaded');
                 });
 
                 // Set initial state
                 img.style.opacity = '0';
-                img.style.transform = 'scale(0.9)';
+                img.style.transform = 'scale(0.95)';
                 img.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+
+                // Error handling for images
+                img.addEventListener('error', function() {
+                    this.style.opacity = '0.5';
+                    this.style.filter = 'grayscale(1)';
+                    console.warn('Failed to load image:', this.src);
+                });
             });
 
-            // Enhanced mobile menu functionality
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navMenu = document.querySelector('.nav-menu');
+            // Enhanced category cards interaction
+            const categoryCards = document.querySelectorAll('.category-card');
+            categoryCards.forEach((card, index) => {
+                // Add staggered animation
+                card.style.animationDelay = `${index * 0.2}s`;
+                card.style.animation = 'fadeInUp 1s ease-out forwards';
 
-            if (mobileMenu && navMenu) {
-                mobileMenu.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('active');
-                    navMenu.classList.toggle('active');
+                // Add loading state management
+                const img = card.querySelector('img');
+                if (img && !img.complete) {
+                    card.classList.add('loading');
+                    img.addEventListener('load', () => {
+                        card.classList.remove('loading');
+                        card.classList.add('loaded');
+                    });
+                }
+
+                // Enhanced touch handling for mobile
+                let touchStartTime = 0;
+                card.addEventListener('touchstart', (e) => {
+                    touchStartTime = Date.now();
+                    card.style.transform = 'scale(0.98)';
                 });
 
-                // Close mobile menu when clicking outside
-                document.addEventListener('click', (e) => {
-                    if (!e.target.closest('.nav-container')) {
-                        mobileMenu.classList.remove('active');
-                        navMenu.classList.remove('active');
+                card.addEventListener('touchend', (e) => {
+                    const touchDuration = Date.now() - touchStartTime;
+                    card.style.transform = '';
+
+                    // Simulate click for quick taps
+                    if (touchDuration < 200) {
+                        const categoryBtn = card.querySelector('.category-btn');
+                        if (categoryBtn) {
+                            categoryBtn.click();
+                        }
                     }
+                });
+            });
+
+            // Optimize images for different screen sizes
+            function optimizeImages() {
+                const categoryImages = document.querySelectorAll('.category-card img');
+                const isMobile = window.innerWidth <= 768;
+                const isTablet = window.innerWidth <= 1024 && window.innerWidth > 768;
+
+                categoryImages.forEach(img => {
+                    // Add performance optimizations
+                    if (isMobile) {
+                        img.loading = 'lazy';
+                        img.decoding = 'async';
+                    }
+
+                    // Ensure proper aspect ratio maintenance
+                    img.style.aspectRatio = '4/3';
+                    img.style.objectFit = 'cover';
+                    img.style.objectPosition = 'center';
                 });
             }
 
-            // Add floating animation to category cards
-            const categoryCards = document.querySelectorAll('.category-card');
-            categoryCards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
-                card.style.animation = 'fadeInUp 1s ease-out forwards';
+            // Initialize image optimization
+            optimizeImages();
+
+            // Re-optimize on window resize
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(optimizeImages, 250);
+            });
+
+            // Intersection Observer for better performance
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.style.transform = 'scale(1)';
+                        img.style.filter = 'none';
+                        imageObserver.unobserve(img);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '50px'
+            });
+
+            // Observe all category images
+            document.querySelectorAll('.category-card img').forEach(img => {
+                imageObserver.observe(img);
             });
 
             // Add hover effect to payment items
