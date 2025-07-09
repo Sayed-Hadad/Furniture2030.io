@@ -2150,3 +2150,136 @@ img {
         backdrop-filter: blur(2px);
     }
 }
+
+/* Arabic Text Optimization for Slider */
+.slide-content h1 {
+    /* Arabic text stability */
+    font-family: 'Cairo', 'Tajawal', Arial, sans-serif !important;
+    direction: rtl !important;
+    unicode-bidi: bidi-override !important;
+    text-align: center !important;
+
+    /* Prevent text distortion */
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+
+    /* Improved Arabic rendering */
+    font-feature-settings: "liga" 1, "kern" 1, "calt" 1;
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Stable positioning */
+    position: relative;
+    z-index: 10;
+
+    /* Remove any text animations that might break Arabic */
+    animation: none !important;
+    transition: opacity 0.8s ease, transform 0.8s ease !important;
+}
+
+.slide-content p {
+    /* Arabic text stability */
+    font-family: 'Cairo', 'Tajawal', Arial, sans-serif !important;
+    direction: rtl !important;
+    unicode-bidi: bidi-override !important;
+    text-align: center !important;
+
+    /* Improved line height for Arabic */
+    line-height: 1.8 !important;
+
+    /* Prevent text distortion */
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    /* Improved Arabic rendering */
+    font-feature-settings: "liga" 1, "kern" 1, "calt" 1;
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Stable positioning */
+    position: relative;
+    z-index: 10;
+
+    /* Remove any text animations that might break Arabic */
+    animation: none !important;
+    transition: opacity 0.8s ease, transform 0.8s ease !important;
+}
+
+/* Force Arabic Text Stability - Override All Animations */
+.slide-content h1,
+.slide-content p,
+.slide.active .slide-content h1,
+.slide.active .slide-content p {
+    /* Force stable Arabic rendering */
+    transform: none !important;
+    animation: none !important;
+    transition: opacity 0.8s ease !important;
+
+    /* Prevent text shifting */
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+
+    /* Ensure proper Arabic font rendering */
+    font-synthesis: none !important;
+    text-size-adjust: 100% !important;
+    -webkit-text-size-adjust: 100% !important;
+
+    /* Prevent text selection issues */
+    user-select: none !important;
+    -webkit-user-select: none !important;
+
+    /* Force hardware acceleration for stability */
+    will-change: opacity !important;
+    transform: translate3d(0, 0, 0) !important;
+}
+
+/* Override existing keyframes to prevent text movement */
+@keyframes slideInFromTop {
+    0%, 100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes slideInFromBottom {
+    0%, 100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes buttonAppear {
+    0%, 100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Stable slide content positioning */
+.slide-content {
+    /* Ensure stable positioning */
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+
+    /* Prevent any movement */
+    will-change: opacity !important;
+    backface-visibility: hidden !important;
+
+    /* Stable transition */
+    transition: opacity 1s ease !important;
+}
+
+.slide.active .slide-content {
+    opacity: 1 !important;
+    transform: translate(-50%, -50%) !important;
+    animation: none !important;
+}
