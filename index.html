@@ -96,71 +96,49 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-slider">
-            <div class="slide active">
-                <img src="assets/images/hero1.jpg" alt="غرف نوم فاخرة" loading="lazy">
-                <div class="slide-content">
-                    <h1>غرف نوم فاخرة</h1>
-                    <p>اكتشف مجموعتنا الحصرية من غرف النوم العصرية</p>
-                    <a href="#categories" class="cta-btn">تسوق الآن</a>
+        <div class="hero-slider-wrapper">
+            <div class="hero-slider">
+                <div class="slide active">
+                    <img src="assets/images/hero1.jpg" alt="غرف نوم فاخرة" loading="eager" decoding="async" fetchpriority="high" style="background:#eee; width:100%; height:100vh; object-fit:cover; display:block;" />
+                    <div class="slider-content">
+                        <h1>غرف نوم فاخرة</h1>
+                        <p>اكتشف مجموعتنا الحصرية من غرف النوم العصرية</p>
+                        <a href="#categories" class="slider-btn">تسوق الآن</a>
+                    </div>
                 </div>
+                <div class="slide">
+                    <img src="assets/images/hero2.jpg" alt="مجالس عصرية" loading="lazy" decoding="async" style="background:#eee; width:100%; height:100vh; object-fit:cover; display:block;" />
+                    <div class="slider-content">
+                        <h1>مجالس عصرية وكلاسيكية</h1>
+                        <p>مجالس بتشطيبات متنوعة وجودة ممتازة</p>
+                        <a href="#categories" class="slider-btn">تسوق الآن</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/hero3.jpg" alt="غرف طعام أنيقة" loading="lazy" decoding="async" style="background:#eee; width:100%; height:100vh; object-fit:cover; display:block;" />
+                    <div class="slider-content">
+                        <h1>غرف طعام أنيقة</h1>
+                        <p>طاولات وكراسي طعام بأحدث التصاميم</p>
+                        <a href="#categories" class="slider-btn">تسوق الآن</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/curtains.jpg" alt="ستائر فخمة" loading="lazy" decoding="async" style="background:#eee; width:100%; height:100vh; object-fit:cover; display:block;" />
+                    <div class="slider-content">
+                        <h1>ستائر فخمة وأنيقة</h1>
+                        <p>ستائر تضيف لمسة من الأناقة لأي مساحة</p>
+                        <a href="#categories" class="slider-btn">تسوق الآن</a>
+                    </div>
+                </div>
+                <!-- Navigation Arrows -->
+                <button class="slider-arrow-new slider-arrow-prev" aria-label="السابق" onclick="window.changeSlide(0)"><i class="fas fa-chevron-right"></i></button>
+                <button class="slider-arrow-new slider-arrow-next" aria-label="التالي" onclick="window.changeSlide(1)"><i class="fas fa-chevron-left"></i></button>
+                <!-- Dots -->
+                <div class="slider-dots-new"></div>
+                <!-- Counter -->
+                <div class="slider-counter-new"><span class="slider-current">1</span> / <span class="slider-total">4</span></div>
             </div>
-            <div class="slide">
-                <img src="assets/images/hero2.jpg" alt="مجالس عصرية" loading="lazy">
-                <div class="slide-content">
-                    <h1>مجالس عصرية وكلاسيكية</h1>
-                    <p>مجالس بتشطيبات متنوعة وجودة ممتازة</p>
-                    <a href="#categories" class="cta-btn">تسوق الآن</a>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="assets/images/hero3.jpg" alt="غرف طعام أنيقة" loading="lazy">
-                <div class="slide-content">
-                    <h1>غرف طعام أنيقة</h1>
-                    <p>طاولات وكراسي طعام بأحدث التصاميم</p>
-                    <a href="#categories" class="cta-btn">تسوق الآن</a>
-                </div>
-            </div>
-            <div class="slide">
-                <img src="assets/images/curtains.jpg" alt="ستائر فخمة" loading="lazy">
-                <div class="slide-content">
-                    <h1>ستائر فخمة وأنيقة</h1>
-                    <p>ستائر تضيف لمسة من الأناقة لأي مساحة</p>
-                    <a href="#categories" class="cta-btn">تسوق الآن</a>
-                </div>
-            </div>        </div>
-
-        <!-- Slider Counter -->
-        <div class="slider-counter">
-            <span id="current-slide">1</span> / <span id="total-slides">4</span>
         </div>
-
-        <!-- Slider Navigation Arrows -->
-        <button class="slider-arrow slider-arrow-prev" onclick="prevSlide()">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        <button class="slider-arrow slider-arrow-next" onclick="nextSlide()">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-
-        <!-- Slider Dots -->
-        <div class="slider-dots">
-            <span class="dot active" onclick="currentSlide(1)">
-                <div class="dot-progress"></div>
-            </span>
-            <span class="dot" onclick="currentSlide(2)">
-                <div class="dot-progress"></div>
-            </span>
-            <span class="dot" onclick="currentSlide(3)">
-                <div class="dot-progress"></div>
-            </span>
-            <span class="dot" onclick="currentSlide(4)">
-                <div class="dot-progress"></div>
-            </span>
-        </div>
-
-        <!-- Progress Bar -->
-        <div class="slide-progress"></div>
     </section>
 
     <!-- About Section -->
@@ -243,7 +221,9 @@
             <h2 class="section-title">منتجاتنا</h2>
             <div class="categories-grid">
                 <div class="category-card" data-category="bedroom">
-                    <img src="assets/images/bedroom.jpg" alt="غرف نوم" loading="lazy">
+                    <div class="category-image-wrapper">
+                        <img src="assets/images/bedroom.jpg" alt="غرف نوم" loading="lazy" decoding="async" />
+                    </div>
                     <div class="category-overlay">
                         <h3>غرف نوم</h3>
                         <p>غرف نوم فاخرة ومريحة</p>
@@ -251,7 +231,9 @@
                     </div>
                 </div>
                 <div class="category-card" data-category="living">
-                    <img src="assets/images/living-room.jpg" alt="مجالس" loading="lazy">
+                    <div class="category-image-wrapper">
+                        <img src="assets/images/living-room.jpg" alt="مجالس" loading="lazy" decoding="async" />
+                    </div>
                     <div class="category-overlay">
                         <h3>مجالس</h3>
                         <p>مجالس بتشطيبات متنوعة وجودة ممتازة</p>
@@ -259,7 +241,9 @@
                     </div>
                 </div>
                 <div class="category-card" data-category="dining">
-                    <img src="assets/images/dining-room.jpg" alt="غرف طعام" loading="lazy">
+                    <div class="category-image-wrapper">
+                        <img src="assets/images/dining-room.jpg" alt="غرف طعام" loading="lazy" decoding="async" />
+                    </div>
                     <div class="category-overlay">
                         <h3>غرف طعام</h3>
                         <p>طاولات وكراسي أنيقة</p>
@@ -267,7 +251,9 @@
                     </div>
                 </div>
                 <div class="category-card" data-category="wardrobe">
-                    <img src="assets/images/wardrobe.jpg" alt="غرف ملابس" loading="lazy">
+                    <div class="category-image-wrapper">
+                        <img src="assets/images/wardrobe.jpg" alt="غرف ملابس" loading="lazy" decoding="async" />
+                    </div>
                     <div class="category-overlay">
                         <h3>غرف ملابس</h3>
                         <p>تصميم حسب الطلب وباحترافية عالية</p>
@@ -275,7 +261,9 @@
                     </div>
                 </div>
                 <div class="category-card" data-category="curtains">
-                    <img src="assets/images/curtains2.jpg" alt="ستائر فخمة" loading="lazy">
+                    <div class="category-image-wrapper">
+                        <img src="assets/images/curtains2.jpg" alt="ستائر فخمة" loading="lazy" decoding="async" />
+                    </div>
                     <div class="category-overlay">
                         <h3>ستائر فخمة</h3>
                         <p>ستائر تضيف لمسة من الأناقة</p>
@@ -370,16 +358,6 @@
                             width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
-            <div class="contact-social">
-                <h4 style="margin-top:2rem; margin-bottom:1rem; text-align:center;">تابعنا على الشبكات الاجتماعية</h4>
-                <div class="social-links" style="justify-content:center; gap:18px;">
-                    <a href="https://wa.me/966535406799" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61578065040062" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/mfrwshat2030" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.tiktok.com/@mfrwshat2030" target="_blank"><i class="fab fa-tiktok"></i></a>
-                    <a href="https://pin.it/4LInDB37o" target="_blank"><i class="fab fa-pinterest"></i></a>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -434,449 +412,9 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="assets/main.js"></script>
-    <script>
-        // Auto-sliding functionality for hero slider
-        let currentSlideIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
-        const totalSlides = slides.length;
-        const currentSlideCounter = document.getElementById('current-slide');
-        const totalSlidesCounter = document.getElementById('total-slides');
-
-        // Update counter display
-        function updateCounter() {
-            if (currentSlideCounter) {
-                currentSlideCounter.textContent = currentSlideIndex + 1;
-            }
-            if (totalSlidesCounter) {
-                totalSlidesCounter.textContent = totalSlides;
-            }
-        }
-
-        // Function to show specific slide
-        function showSlide(index) {
-            // Hide all slides and remove progress from dots
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => {
-                dot.classList.remove('active');
-                const progress = dot.querySelector('.dot-progress');
-                if (progress) {
-                    progress.style.animation = 'none';
-                }
-            });
-
-            // Show current slide
-            slides[index].classList.add('active');
-            dots[index].classList.add('active');
-
-            // Start progress animation for active dot
-            const activeProgress = dots[index].querySelector('.dot-progress');
-            if (activeProgress) {
-                // Force reflow to restart animation
-                activeProgress.style.animation = 'none';
-                activeProgress.offsetHeight; // Trigger reflow
-                activeProgress.style.animation = 'fillProgress 5s linear infinite';
-            }
-
-            // Ensure Arabic text is properly displayed
-            const activeSlide = slides[index];
-            const slideContent = activeSlide.querySelector('.slide-content');
-            if (slideContent) {
-                const title = slideContent.querySelector('h1');
-                const paragraph = slideContent.querySelector('p');
-                const button = slideContent.querySelector('.cta-btn');
-
-                // Reset and properly display Arabic text
-                if (title) {
-                    title.style.opacity = '1';
-                    title.style.transform = 'translateY(0)';
-                    title.style.visibility = 'visible';
-                }
-
-                if (paragraph) {
-                    paragraph.style.opacity = '1';
-                    paragraph.style.transform = 'translateY(0)';
-                    paragraph.style.visibility = 'visible';
-                }
-
-                if (button) {
-                    button.style.opacity = '1';
-                    button.style.transform = 'translateY(0)';
-                    button.style.visibility = 'visible';
-                }
-            }
-
-            // Update counter
-            updateCounter();
-        }
-
-        // Function to go to next slide
-        function nextSlide() {
-            currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
-            showSlide(currentSlideIndex);
-        }
-
-        // Function to go to previous slide
-        function prevSlide() {
-            currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
-            showSlide(currentSlideIndex);
-        }
-
-        // Function for dots navigation
-        function currentSlide(index) {
-            currentSlideIndex = index - 1;
-            showSlide(currentSlideIndex);
-            // Reset auto-slide timer when user manually changes slide
-            clearInterval(autoSlideInterval);
-            autoSlideInterval = setInterval(nextSlide, 5000);
-        }
-
-        // Initialize counter and Arabic text
-        updateCounter();
-
-        // Initialize Arabic text display
-        function initializeArabicText() {
-            slides.forEach(slide => {
-                const slideContent = slide.querySelector('.slide-content');
-                if (slideContent) {
-                    const title = slideContent.querySelector('h1');
-                    const paragraph = slideContent.querySelector('p');
-                    const button = slideContent.querySelector('.cta-btn');
-
-                    // Ensure proper Arabic text rendering
-                    if (title) {
-                        title.style.fontFamily = 'Cairo, Tajawal, Arial, sans-serif';
-                        title.style.direction = 'rtl';
-                        title.style.textAlign = 'center';
-                        title.style.unicodeBidi = 'bidi-override';
-                    }
-
-                    if (paragraph) {
-                        paragraph.style.fontFamily = 'Cairo, Tajawal, Arial, sans-serif';
-                        paragraph.style.direction = 'rtl';
-                        paragraph.style.textAlign = 'center';
-                        paragraph.style.unicodeBidi = 'bidi-override';
-                    }
-                }
-            });
-
-            // Show first slide properly
-            showSlide(0);
-        }
-
-        // Initialize Arabic text after DOM is ready
-        initializeArabicText();
-
-        // Auto-slide every 5 seconds
-        let autoSlideInterval = setInterval(nextSlide, 5000);
-
-        // Pause auto-slide when user hovers over hero section
-        const heroSection = document.querySelector('.hero');
-        if (heroSection) {
-            heroSection.addEventListener('mouseenter', () => {
-                clearInterval(autoSlideInterval);
-                // Pause progress animations
-                dots.forEach(dot => {
-                    const progress = dot.querySelector('.dot-progress');
-                    if (progress) {
-                        progress.style.animationPlayState = 'paused';
-                    }
-                });
-            });
-
-            heroSection.addEventListener('mouseleave', () => {
-                autoSlideInterval = setInterval(nextSlide, 5000);
-                // Resume progress animations
-                dots.forEach(dot => {
-                    const progress = dot.querySelector('.dot-progress');
-                    if (progress) {
-                        progress.style.animationPlayState = 'running';
-                    }
-                });
-            });
-        }
-
-        // Handle mobile touch gestures for slider
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        if (heroSection) {
-            heroSection.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            });
-
-            heroSection.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            });
-        }
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    // Swipe left - next slide
-                    nextSlide();
-                } else {
-                    // Swipe right - previous slide
-                    prevSlide();
-                }
-                // Reset auto-slide timer
-                clearInterval(autoSlideInterval);
-                autoSlideInterval = setInterval(nextSlide, 5000);
-            }
-        }
-
-        // Enhanced UI Interactions
-        document.addEventListener('DOMContentLoaded', function() {
-            // Intersection Observer for animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.animation = 'fadeInUp 1s ease-out forwards';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all sections
-            document.querySelectorAll('section').forEach(section => {
-                section.style.opacity = '0';
-                observer.observe(section);
-            });
-
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // Add active class to current navigation item
-            const navLinks = document.querySelectorAll('.nav-link');
-            const sections = document.querySelectorAll('section[id]');
-
-            function updateActiveNav() {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.getBoundingClientRect().top;
-                    if (sectionTop <= 100) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('active');
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', updateActiveNav);
-
-            // Add parallax effect to hero section
-            window.addEventListener('scroll', () => {
-                const scrolled = window.pageYOffset;
-                const parallax = document.querySelector('.hero');
-                if (parallax) {
-                    const speed = scrolled * 0.5;
-                    parallax.style.transform = `translateY(${speed}px)`;
-                }
-            });
-
-            // Add loading animation for images
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            images.forEach(img => {
-                img.addEventListener('load', function() {
-                    this.style.opacity = '1';
-                    this.style.transform = 'scale(1)';
-                    this.classList.add('loaded');
-                });
-
-                // Set initial state
-                img.style.opacity = '0';
-                img.style.transform = 'scale(0.95)';
-                img.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-
-                // Error handling for images
-                img.addEventListener('error', function() {
-                    this.style.opacity = '0.5';
-                    this.style.filter = 'grayscale(1)';
-                    console.warn('Failed to load image:', this.src);
-                });
-            });
-
-            // Enhanced category cards interaction
-            const categoryCards = document.querySelectorAll('.category-card');
-            categoryCards.forEach((card, index) => {
-                // Add staggered animation
-                card.style.animationDelay = `${index * 0.2}s`;
-                card.style.animation = 'fadeInUp 1s ease-out forwards';
-
-                // Add loading state management
-                const img = card.querySelector('img');
-                if (img && !img.complete) {
-                    card.classList.add('loading');
-                    img.addEventListener('load', () => {
-                        card.classList.remove('loading');
-                        card.classList.add('loaded');
-                    });
-                }
-
-                // Enhanced touch handling for mobile
-                let touchStartTime = 0;
-                card.addEventListener('touchstart', (e) => {
-                    touchStartTime = Date.now();
-                    card.style.transform = 'scale(0.98)';
-                });
-
-                card.addEventListener('touchend', (e) => {
-                    const touchDuration = Date.now() - touchStartTime;
-                    card.style.transform = '';
-
-                    // Simulate click for quick taps
-                    if (touchDuration < 200) {
-                        const categoryBtn = card.querySelector('.category-btn');
-                        if (categoryBtn) {
-                            categoryBtn.click();
-                        }
-                    }
-                });
-            });
-
-            // Optimize images for different screen sizes
-            function optimizeImages() {
-                const categoryImages = document.querySelectorAll('.category-card img');
-                const isMobile = window.innerWidth <= 768;
-                const isTablet = window.innerWidth <= 1024 && window.innerWidth > 768;
-
-                categoryImages.forEach(img => {
-                    // Add performance optimizations
-                    if (isMobile) {
-                        img.loading = 'lazy';
-                        img.decoding = 'async';
-                    }
-
-                    // Ensure proper aspect ratio maintenance
-                    img.style.aspectRatio = '4/3';
-                    img.style.objectFit = 'cover';
-                    img.style.objectPosition = 'center';
-                });
-            }
-
-            // Initialize image optimization
-            optimizeImages();
-
-            // Re-optimize on window resize
-            let resizeTimer;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(optimizeImages, 250);
-            });
-
-            // Intersection Observer for better performance
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.style.transform = 'scale(1)';
-                        img.style.filter = 'none';
-                        imageObserver.unobserve(img);
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '50px'
-            });
-
-            // Observe all category images
-            document.querySelectorAll('.category-card img').forEach(img => {
-                imageObserver.observe(img);
-            });
-
-            // Add hover effect to payment items
-            const paymentItems = document.querySelectorAll('.payment-item');
-            paymentItems.forEach(item => {
-                item.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.05)';
-                });
-
-                item.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });            // Enhanced slide content animation (stable for Arabic text)
-            function animateSlideContent(slide) {
-                const slideContent = slide.querySelector('.slide-content');
-                if (!slideContent) return;
-
-                const title = slideContent.querySelector('h1');
-                const paragraph = slideContent.querySelector('p');
-                const button = slideContent.querySelector('.cta-btn');
-
-                // Simple fade-in animation that preserves Arabic text
-                if (title) {
-                    title.style.opacity = '0';
-                    title.style.visibility = 'visible';
-                    setTimeout(() => {
-                        title.style.opacity = '1';
-                        title.style.transition = 'opacity 0.8s ease';
-                    }, 300);
-                }
-
-                if (paragraph) {
-                    paragraph.style.opacity = '0';
-                    paragraph.style.visibility = 'visible';
-                    setTimeout(() => {
-                        paragraph.style.opacity = '1';
-                        paragraph.style.transition = 'opacity 0.8s ease';
-                    }, 500);
-                }
-
-                if (button) {
-                    button.style.opacity = '0';
-                    button.style.visibility = 'visible';
-                    setTimeout(() => {
-                        button.style.opacity = '1';
-                        button.style.transition = 'opacity 0.8s ease';
-                    }, 700);
-                }
-            }
-
-            // Simplified slide observer for Arabic text stability
-            const slideObserver = new MutationObserver((mutations) => {
-                mutations.forEach((mutation) => {
-                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                        const slide = mutation.target;
-                        if (slide.classList.contains('active')) {
-                            // Small delay to ensure slide transition is complete
-                            setTimeout(() => {
-                                animateSlideContent(slide);
-                            }, 100);
-                        }
-                    }
-                });
-            });
-
-            slides.forEach(slide => {
-                slideObserver.observe(slide, { attributes: true });
-            });
-        });
-    </script>
+    <script src="assets/main.js" defer></script>
+    <!-- تحسين تحميل الخطوط -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Cairo:wght@300;400;500;600;700&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Cairo:wght@300;400;500;600;700&display=swap"></noscript>
 </body>
 </html>

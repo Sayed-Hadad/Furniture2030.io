@@ -321,6 +321,23 @@ function initializeHeroSlider() {
     document.head.appendChild(style);
 }
 
+// توليد النقاط تلقائياً للسلايدر الجديد
+window.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.hero-slider');
+    const slides = slider ? slider.querySelectorAll('.slide') : [];
+    const dotsContainer = document.querySelector('.slider-dots-new');
+    if (slider && slides.length && dotsContainer) {
+        dotsContainer.innerHTML = '';
+        slides.forEach((_, idx) => {
+            const dot = document.createElement('span');
+            dot.className = 'dot' + (idx === 0 ? ' active' : '');
+            dot.setAttribute('aria-label', 'انتقل إلى الشريحة ' + (idx + 1));
+            dot.onclick = function() { window.currentSlide(idx + 1); };
+            dotsContainer.appendChild(dot);
+        });
+    }
+});
+
 // Scroll animations
 function initializeScrollAnimations() {
     const observerOptions = {
