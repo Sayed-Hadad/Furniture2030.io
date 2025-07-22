@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://mafrooshat2030.netlify.app/sitemap.xml
+Sitemap: https://furniture2030.site/sitemap.xml
 
 # Allow all CSS and JS files
 Allow: /assets/
